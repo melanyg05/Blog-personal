@@ -1,0 +1,239 @@
+/* VARIABLES - Paleta de colores del sitio */
+:root {
+    --color-fondo: #F7EEEE;
+    --color-primario: #AB0132;
+    --color-secundario: #FDE7EC;
+    --color-texto: #190007;
+    --color-texto-secunadrio: #ffff;
+    --color-tarjeta: #BD7070;
+    --fuente: 'Segoe UI', sans-serif;
+}
+
+/* RESET - Borrar estilos por defecto del navegadores */ 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;    
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente);
+    line-height: 1.7;
+}
+
+/* NAVEGACION */
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: var(--color-texto);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: var(--color-secundario);
+}
+
+nav a.activo {
+    color: var(--color-tarjeta);
+    font-weight: bold;
+    border-bottom: 2px solid var(--color-tarjeta);
+    padding-bottom: 3px;
+}
+
+/* ===================================================
+    SECCION FOOTER
+   =================================================== */
+
+footer{
+    text-align: center;
+    font-weight: bold;
+    -webkit-text-fill-color: var(--color-primario);
+    padding: 30px;
+    background-color: var(--color-secundario);
+    font-size: 0.9rem;
+}
+/* ===================================================
+    SECCION INICIO
+   =================================================== */
+
+#inicio {
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px;
+}
+
+#inicio h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.nombre {
+    color: var(--color-primario);
+}
+
+#inicio p{
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin-bottom: 30px;
+    color: #4b5563;
+}
+
+.boton {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover{
+    background-color: var(--color-tarjeta);
+}
+
+/* ===================================================
+    SECCION SOBRE MI
+   =================================================== */
+
+#sobre-mi {
+    padding: 30px 60px;
+    text-align: center;
+}
+
+#sobre-mi h1 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom:20px;
+}
+
+/* CONTENEDOR DE TARJETAS */
+.contenedor-mi {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    max-width: 1800px;
+    margin: 0 auto;
+}
+
+/* TARJETA */
+.perfil {
+    background-color: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 30px 30px rgba(124,58,237,0.08);
+}
+.perfil h3 {
+    color: var(--color-texto-secunadrio);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+.perfil p {
+    color: var(--color-texto);
+    font-size: 1.05rem;
+}
+.datos {
+    background-color: var(--color-tarjeta);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid #ffffff;
+    box-shadow: 0 4px 20px rgba(124,58,237,0.08);
+    text-align: left;
+}
+.datos h3 {
+    color: var(--color-texto-secunadrio);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+.foto-central {
+    margin: 40px auto;
+    text-align: center;
+}
+
+.foto-central img {
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    border-radius: 20px;
+    display: block;
+    margin: 0 auto;
+}
+/* ===================================================
+    SECCION FAMILIA
+   =================================================== */
+#familia {
+    padding: 30px 60px;
+    text-align:left;
+}
+
+#familia h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--color-primario);
+    margin-bottom:20px;
+}
+/*contenedor familia*/
+.contenedor-mi {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 60px auto;
+}
+/*tarjetas e imagen*/
+.textof {
+    flex:1;
+    background-color: var(--color-tarjeta);
+    padding:10px;
+    border-radius: 20px;
+    box-shadow: 0 30px 30px rgba(124,58,237,0.08);
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+.textof h2 {
+    text-align: center;
+    color: var(--color-texto-secunadrio);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.perfil p {
+    color: var(--color-texto);
+    font-size: 1.05rem;
+}
+.imagenf{
+    flex: 1;
+}
+
+.imagenf img {
+    width: 100%;
+    border-radius: 20px;
+}
